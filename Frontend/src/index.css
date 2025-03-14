@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@layer base {
+    body {
+        @apply bg-gray-50 text-gray-900;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+@layer components {
+    .container {
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    @screen sm {
+        .container {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+    @screen lg {
+        .container {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+    .btn {
+        @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+    }
+    .btn-primary {
+        @apply bg-primary text-white;
+    }
+    .btn-primary:hover {
+        @apply bg-primary/90;
+    }
+    .btn-secondary {
+        @apply bg-secondary text-white;
+    }
+    .btn-secondary:hover {
+        @apply bg-secondary/90;
+    }
+    .section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    @screen sm {
+        .section {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+    .heading {
+        @apply text-3xl font-bold text-gray-900;
+    }
+    @screen sm {
+        .heading {
+            @apply text-4xl;
+        }
+    }
+    .subheading {
+        @apply text-xl text-gray-600 mt-4;
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
